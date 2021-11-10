@@ -10,7 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GabsShopApp">
         <activity
+            android:name=".Splash"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

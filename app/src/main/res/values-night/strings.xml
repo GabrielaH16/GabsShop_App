@@ -1,6 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Gabs Shop App</string>
     <string name="home_gs">Home_GS</string>
-    <string name="string_home_gs" />
     <string name="progress">Progress</string>
 </resources>
