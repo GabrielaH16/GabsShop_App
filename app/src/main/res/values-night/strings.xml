@@ -2,4 +2,10 @@
 <resources>
     <string name="home_gs">Home_GS</string>
     <string name="progress">Progress</string>
+
+    <string name="first_slide">Elige tu produdcto</string>
+    <string name="second_slide">Entrga inmediata</string>
+    <string name="third_slide">Buen serivicio</string>
+
+    <string name="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry</string>
 </resources>
