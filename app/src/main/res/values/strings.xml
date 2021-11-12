@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Gabs Shop App</string>
+    <string name="Titulo">Gabs Shop</string>
     <string name="home_gs">Home_GS</string>
     <string name="string_home_gs" />
     <string name="progress">Progress</string>
@@ -8,5 +9,5 @@
     <string name="second_slide">Entrga inmediata</string>
     <string name="third_slide">Buen serivicio</string>
 
-    <string name="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry</string>
+    <string name="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</string>
 </resources>

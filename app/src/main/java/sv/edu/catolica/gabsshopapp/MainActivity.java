@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
         TimerTask tarea = new TimerTask() {
             @Override
             public void run() {
-                Intent intent = new Intent(MainActivity.this, OnBoardingActivity.class);
+                Intent intent = new Intent(MainActivity.this, RegistrationActivity.class);
                 startActivity(intent);
                 finish();
             }

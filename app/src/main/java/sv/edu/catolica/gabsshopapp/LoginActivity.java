@@ -1,5 +1,6 @@
 package sv.edu.catolica.gabsshopapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,33 +10,32 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
-    EditText name,email,password;
+    EditText email,password;
     private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        mAuth=FirebaseAuth.getInstance();
+
+        email=findViewById(R.id.email);
+        password=findViewById(R.id.password);
+
     }
 
     public void singIn(View view) {
-        name.setError(null);
         password.setError(null);
         email.setError(null);
-        String userName=name.getText().toString();
         String userEmail=email.getText().toString();
         String userPassword=password.getText().toString();
-
-        if (TextUtils.isEmpty(userName)){
-
-            Toast.makeText(this, "Ingresa un nombre", Toast.LENGTH_SHORT).show();
-            name.setError("Ingrese un valor en el campo");
-            return;
-
-        }
 
         if (TextUtils.isEmpty(userEmail)){
 
@@ -55,6 +55,18 @@ public class LoginActivity extends AppCompatActivity {
             return;
 
         }
+        mAuth.signInWithEmailAndPassword(userEmail,userPassword)
+                .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()){
+                            Toast.makeText(LoginActivity.this,"Logueo exitoso",Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(LoginActivity.this,Splash.class));
+                        }else{
+                            Toast.makeText(LoginActivity.this,"Logueo Fallido"+task.getException(),Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
     }
 
     public void singUp(View view) {
