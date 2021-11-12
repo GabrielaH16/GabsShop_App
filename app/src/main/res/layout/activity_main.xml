@@ -10,6 +10,7 @@
         android:id="@+id/img_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/Skyepink"
         android:contentDescription="@string/string_home_gs"
         android:src="@drawable/home" />
 
