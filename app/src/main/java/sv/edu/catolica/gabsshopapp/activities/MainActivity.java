@@ -1,14 +1,13 @@
-package sv.edu.catolica.gabsshopapp;
-
-import androidx.appcompat.app.AppCompatActivity;
+package sv.edu.catolica.gabsshopapp.activities;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import java.sql.Time;
 import java.util.Timer;
 import java.util.TimerTask;
+
+import sv.edu.catolica.gabsshopapp.R;
 
 public class MainActivity extends Activity {
 

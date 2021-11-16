@@ -1,4 +1,4 @@
-package sv.edu.catolica.gabsshopapp;
+package sv.edu.catolica.gabsshopapp.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -12,6 +12,8 @@ import org.imaginativeworld.whynotimagecarousel.model.CarouselItem;
 import java.util.ArrayList;
 import java.util.List;
 
+import sv.edu.catolica.gabsshopapp.R;
+
 public class OnBoardingCarousell extends AppCompatActivity {
     private ImageCarousel carousel;
 
@@ -20,6 +22,7 @@ public class OnBoardingCarousell extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_on_boarding_carousell);
+
         carousel= findViewById(R.id.carousel);
         carousel.registerLifecycle(getLifecycle());
         List<CarouselItem> list = new ArrayList<>();
