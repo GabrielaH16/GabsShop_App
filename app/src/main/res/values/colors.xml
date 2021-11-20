@@ -8,10 +8,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="pink">#ff5ccb</color>
+    <color name="pink">#CD65BB</color>
     <color name="Skyepink">#E2ADBE</color>
-    <color name="Strong_pink">#FF1AB6</color>
+    <color name="Strong_pink">#E779D3</color>
     <color name="blue">#00f0ff</color>
+    <color name="cat_title">#712D97</color>
     <color name="backgroundColor">#FFFCFC</color>
     <color name="textHeading">#008eff</color>
+    <color name="cat_color">#FDF2E2</color>
 </resources>

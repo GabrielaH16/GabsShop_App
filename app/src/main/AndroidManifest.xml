@@ -12,6 +12,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GabsShopApp">
         <activity
+            android:name=".activities.DepoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.BlusasActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.AccesoriosActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.BikinisActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.CategoriesActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.Acerca_nosotros"
+            android:exported="true" />
+        <activity
             android:name=".activities.actividad_detalles"
             android:exported="true" />
         <activity
@@ -22,7 +40,7 @@
             android:exported="true" />
         <activity
             android:name=".activities.RegistrationActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".activities.LoginActivity"
             android:exported="true" />

@@ -1,36 +1,24 @@
 package sv.edu.catolica.gabsshopapp.activities;
 
-import android.app.Activity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-
-import androidx.annotation.NonNull;
-
-import java.util.Timer;
-import java.util.TimerTask;
+import android.view.View;
 
 import sv.edu.catolica.gabsshopapp.R;
 
-public class MainActivity extends Activity {
+public class CategoriesActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        TimerTask tarea = new TimerTask() {
-            @Override
-            public void run() {
-                Intent intent = new Intent(MainActivity.this, RegistrationActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        };
-        Timer tiempo = new Timer();
-        tiempo.schedule(tarea,3000);
+        setContentView(R.layout.activity_categories);
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.overflow, menu);
@@ -42,17 +30,17 @@ public class MainActivity extends Activity {
 
         switch (item.getItemId()) {
             case R.id.itInicio:
-                Intent Home = new Intent(MainActivity.this, Splash.class);
+                Intent Home = new Intent(CategoriesActivity.this, Splash.class);
                 startActivity(Home);
                 break;
 
             case R.id.itAcerca:
-                Intent About = new Intent(MainActivity.this, Acerca_nosotros.class);
+                Intent About = new Intent(CategoriesActivity.this, Acerca_nosotros.class);
                 startActivity(About);
                 break;
 
             case R.id.itCategorias:
-                Intent Categories = new Intent(MainActivity.this, CategoriesActivity.class);
+                Intent Categories = new Intent(CategoriesActivity.this, CategoriesActivity.class);
                 startActivity(Categories);
                 break;
 
@@ -65,5 +53,25 @@ public class MainActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void fnGoToBkinis(View view) {
+        Intent Bikinis = new Intent(CategoriesActivity.this, BikinisActivity.class);
+        startActivity(Bikinis);
+    }
+
+    public void fnGoToAccesorios(View view) {
+        Intent Accesorios = new Intent(CategoriesActivity.this, AccesoriosActivity.class);
+        startActivity(Accesorios);
+    }
+
+    public void fnGoToBlusas(View view) {
+        Intent Blusas = new Intent(CategoriesActivity.this, BlusasActivity.class);
+        startActivity(Blusas);
+    }
+
+    public void fnGoToDepo(View view) {
+        Intent Depo = new Intent(CategoriesActivity.this, DepoActivity.class);
+        startActivity(Depo);
     }
 }

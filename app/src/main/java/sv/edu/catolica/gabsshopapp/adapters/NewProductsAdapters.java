@@ -1,5 +1,6 @@
 package sv.edu.catolica.gabsshopapp.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.net.NetworkInfo;
@@ -37,7 +38,7 @@ public class NewProductsAdapters extends RecyclerView.Adapter<NewProductsAdapter
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         Glide.with(context).load(list.get(position).getImg_url()).into(holder.newImg);
         holder.newName.setText(list.get(position).getName());
         holder.newPrice.setText(String.valueOf(list.get(position).getPrice()));

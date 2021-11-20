@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cat_color"
+    android:orientation="vertical"
+    tools:context=".activities.CategoriesActivity">
+
+
+    <TextView
+        android:id="@+id/txtAcerca"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:background="@drawable/categorias_title"
+        app:layout_constraintBottom_toTopOf="@+id/cat_blusas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.663" />
+
+    <LinearLayout
+        android:id="@+id/cat_bikinis"
+        android:layout_width="180dp"
+        android:layout_height="250dp"
+        android:background="@drawable/cat_bikinis"
+        android:gravity="center"
+        android:onClick="fnGoToBkinis"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/cat_accesorios"
+        app:layout_constraintEnd_toStartOf="@+id/cat_blusas"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAcerca"
+        app:layout_constraintVertical_bias="0.661"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <LinearLayout
+        android:id="@+id/cat_accesorios"
+        android:layout_width="180dp"
+        android:layout_height="250dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="52dp"
+        android:background="@drawable/cat_accesorio"
+        android:gravity="center"
+        android:onClick="fnGoToAccesorios"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cat_depo"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <LinearLayout
+        android:id="@+id/cat_blusas"
+        android:layout_width="180dp"
+        android:layout_height="250dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/cat_blusas"
+        android:gravity="center"
+        android:onClick="fnGoToBlusas"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/cat_depo"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <LinearLayout
+        android:id="@+id/cat_depo"
+        android:layout_width="180dp"
+        android:layout_height="250dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="52dp"
+        android:background="@drawable/cat_depo"
+        android:gravity="center"
+        android:onClick="fnGoToDepo"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

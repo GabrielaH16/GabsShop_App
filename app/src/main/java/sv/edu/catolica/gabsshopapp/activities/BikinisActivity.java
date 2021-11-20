@@ -1,37 +1,22 @@
 package sv.edu.catolica.gabsshopapp.activities;
 
-import android.app.Activity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import androidx.annotation.NonNull;
-
-import java.util.Timer;
-import java.util.TimerTask;
-
 import sv.edu.catolica.gabsshopapp.R;
 
-public class MainActivity extends Activity {
+public class BikinisActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        TimerTask tarea = new TimerTask() {
-            @Override
-            public void run() {
-                Intent intent = new Intent(MainActivity.this, RegistrationActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        };
-        Timer tiempo = new Timer();
-        tiempo.schedule(tarea,3000);
+        setContentView(R.layout.activity_bikinis);
     }
-    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.overflow, menu);
         return true;
@@ -42,17 +27,17 @@ public class MainActivity extends Activity {
 
         switch (item.getItemId()) {
             case R.id.itInicio:
-                Intent Home = new Intent(MainActivity.this, Splash.class);
+                Intent Home = new Intent(BikinisActivity.this, Splash.class);
                 startActivity(Home);
                 break;
 
             case R.id.itAcerca:
-                Intent About = new Intent(MainActivity.this, Acerca_nosotros.class);
+                Intent About = new Intent(BikinisActivity.this, Acerca_nosotros.class);
                 startActivity(About);
                 break;
 
             case R.id.itCategorias:
-                Intent Categories = new Intent(MainActivity.this, CategoriesActivity.class);
+                Intent Categories = new Intent(BikinisActivity.this, CategoriesActivity.class);
                 startActivity(Categories);
                 break;
 
