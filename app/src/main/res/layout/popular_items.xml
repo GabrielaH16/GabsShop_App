@@ -17,7 +17,7 @@
 
 
         <ImageView
-            android:id="@+id/new_img"
+            android:id="@+id/all_img"
             android:scaleType="centerCrop"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -40,13 +40,13 @@
             android:textStyle="bold"
             tools:layout_editor_absoluteX="84dp"
             tools:layout_editor_absoluteY="5dp"
-            app:layout_constraintBottom_toBottomOf="@+id/new_img"
+            app:layout_constraintBottom_toBottomOf="@+id/all_img"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.1" />
 
         <TextView
-            android:id="@+id/new_product_name"
+            android:id="@+id/all_product_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
@@ -57,15 +57,15 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/new_img" />
+            app:layout_constraintTop_toBottomOf="@+id/all_img" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="@+id/new_product_name"
-            app:layout_constraintEnd_toEndOf="@id/new_product_name"
-            app:layout_constraintStart_toStartOf="@id/new_product_name">
+            app:layout_constraintBottom_toBottomOf="@+id/all_product_name"
+            app:layout_constraintEnd_toEndOf="@id/all_product_name"
+            app:layout_constraintStart_toStartOf="@id/all_product_name">
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -82,11 +82,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.357"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/new_product_name"
+            app:layout_constraintTop_toBottomOf="@+id/all_product_name"
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
-            android:id="@+id/new_price"
+            android:id="@+id/all_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat"
@@ -97,7 +97,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.071"
             app:layout_constraintStart_toEndOf="@+id/dollar"
-            app:layout_constraintTop_toBottomOf="@+id/new_product_name" />
+            app:layout_constraintTop_toBottomOf="@+id/all_product_name" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

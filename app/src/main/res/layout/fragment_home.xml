@@ -47,7 +47,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/montserrat_bold"
-                android:text="Category"
+                android:text="Categorias"
                 android:textSize="21sp"
                 android:textStyle="bold" />
 
@@ -59,7 +59,7 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/montserrat"
                 android:gravity="end"
-                android:text="See All"
+                android:text="Ver Mas"
                 android:textColor="@color/pink"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -97,7 +97,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="9dp"
                         android:fontFamily="@font/montserrat_bold"
-                        android:text="New Products"
+                        android:text="Nuevos Productos"
                         android:textSize="21sp"
                         android:textStyle="bold" />
 
@@ -106,7 +106,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/new_product_name"
                         android:layout_marginLeft="9dp"
-                        android:text="We provide best products." />
+                        android:text="Echa un vistazo a nuetsras nuevas colecciones" />
 
                     <TextView
                         android:id="@+id/newProducts_see_all"
@@ -115,7 +115,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_marginRight="8dp"
                         android:fontFamily="@font/montserrat"
-                        android:text="See All"
+                        android:text="Ver Mas"
                         android:textColor="@color/pink"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -165,7 +165,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginRight="8dp"
                     android:fontFamily="@font/montserrat"
-                    android:text="See All"
+                    android:text="Ver Mas"
                     android:textColor="@color/pink"
                     android:textSize="18sp"
                     android:textStyle="bold" />
