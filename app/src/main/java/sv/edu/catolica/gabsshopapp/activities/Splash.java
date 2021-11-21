@@ -65,9 +65,10 @@ public class Splash extends AppCompatActivity {
                 break;
 
             case R.id.itSalir:
-                auth.signOut();
-                startActivity(new Intent(Splash.this, RegistrationActivity.class));
-                finish();
+                Intent intent = new Intent();
+                intent.setAction(intent.ACTION_MAIN);
+                intent.addCategory(intent.CATEGORY_HOME);
+                startActivity(intent);
                 break;
 
             case R.id.menu_my_cart:
