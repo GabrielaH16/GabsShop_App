@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:background="@color/blue"
             android:padding="6dp"
-            android:text="New"
+            android:text="Popular"
             android:textColor="@color/white"
             android:textSize="13dp"
             android:textAlignment="center"

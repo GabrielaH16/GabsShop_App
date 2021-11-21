@@ -147,7 +147,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="9dp"
                     android:fontFamily="@font/montserrat_bold"
-                    android:text="Popular Products"
+                    android:text="Productos Populares"
                     android:textSize="21sp"
                     android:textStyle="bold" />
 
@@ -156,7 +156,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/popular_products"
                     android:layout_marginLeft="9dp"
-                    android:text="We provide best products." />
+                    android:text="Lo productos más populares" />
 
                 <TextView
                     android:id="@+id/popular_see_all"

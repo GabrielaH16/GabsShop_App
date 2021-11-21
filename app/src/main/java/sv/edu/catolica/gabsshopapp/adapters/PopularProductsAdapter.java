@@ -1,6 +1,8 @@
 package sv.edu.catolica.gabsshopapp.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +17,7 @@ import com.bumptech.glide.Glide;
 import java.util.List;
 
 import sv.edu.catolica.gabsshopapp.R;
+import sv.edu.catolica.gabsshopapp.activities.actividad_detalles;
 import sv.edu.catolica.gabsshopapp.models.PopularProductsModel;
 
 public class PopularProductsAdapter extends RecyclerView.Adapter<PopularProductsAdapter.ViewHolder> {
@@ -34,10 +37,19 @@ public class PopularProductsAdapter extends RecyclerView.Adapter<PopularProducts
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         Glide.with(context).load(popularProductsModelList.get(position).getImg_url()).into(holder.imageView);
         holder.name.setText(popularProductsModelList.get(position).getName());
         holder.price.setText(String.valueOf(popularProductsModelList.get(position).getPrice()));
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(context, actividad_detalles.class);
+                intent.putExtra("detailed",popularProductsModelList.get(position));
+                context.startActivity (intent);
+            }
+        });
     }
 
     @Override
