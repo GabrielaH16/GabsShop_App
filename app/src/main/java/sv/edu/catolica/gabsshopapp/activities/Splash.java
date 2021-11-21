@@ -1,14 +1,18 @@
 package sv.edu.catolica.gabsshopapp.activities;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 import sv.edu.catolica.gabsshopapp.R;
 import sv.edu.catolica.gabsshopapp.fragments.HomeFragment;
@@ -16,6 +20,7 @@ import sv.edu.catolica.gabsshopapp.fragments.HomeFragment;
 public class Splash extends AppCompatActivity {
 
     Fragment homeFragment;
+    FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,11 +32,12 @@ public class Splash extends AppCompatActivity {
 
     }
 
-    private void loadFragment(Fragment homefragment){
-        FragmentTransaction transaction= getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.home_container,homefragment);
+    private void loadFragment(Fragment homefragment) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.home_container, homefragment);
         transaction.commit();
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -59,10 +65,14 @@ public class Splash extends AppCompatActivity {
                 break;
 
             case R.id.itSalir:
-                Intent intent = new Intent();
-                intent.setAction(intent.ACTION_MAIN);
-                intent.addCategory(intent.CATEGORY_HOME);
-                startActivity(intent);
+                auth.signOut();
+                startActivity(new Intent(Splash.this, RegistrationActivity.class));
+                finish();
+                break;
+
+            case R.id.menu_my_cart:
+                Intent Carrito = new Intent(Splash.this, CartActivity.class);
+                startActivity(Carrito);
                 break;
         }
 
