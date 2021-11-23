@@ -39,11 +39,6 @@ public class CategoriesActivity extends AppCompatActivity {
                 startActivity(About);
                 break;
 
-            case R.id.itCategorias:
-                Intent Categories = new Intent(CategoriesActivity.this, CategoriesActivity.class);
-                startActivity(Categories);
-                break;
-
             case R.id.itSalir:
                 Intent intent = new Intent();
                 intent.setAction(intent.ACTION_MAIN);

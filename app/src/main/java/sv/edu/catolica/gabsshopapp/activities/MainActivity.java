@@ -51,11 +51,6 @@ public class MainActivity extends Activity {
                 startActivity(About);
                 break;
 
-            case R.id.itCategorias:
-                Intent Categories = new Intent(MainActivity.this, CategoriesActivity.class);
-                startActivity(Categories);
-                break;
-
             case R.id.itSalir:
                 Intent intent = new Intent();
                 intent.setAction(intent.ACTION_MAIN);

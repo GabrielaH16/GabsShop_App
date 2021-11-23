@@ -37,32 +37,36 @@ public class CartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
 
-        auth = FirebaseAuth.getInstance();
-        firestore = FirebaseFirestore.getInstance();
+        try {
+            auth = FirebaseAuth.getInstance();
+            firestore = FirebaseFirestore.getInstance();
 
-        toolbar=findViewById(R.id.my_cart_toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            toolbar = findViewById(R.id.my_cart_toolbar);
+            setSupportActionBar(toolbar);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //recyclerView=findViewById(R.id.cart_rec);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        cartModelList = new ArrayList<>();
-        cartAdapter = new MyCartAdapter(this, cartModelList);
-        recyclerView.setAdapter(cartAdapter);
+            //recyclerView=findViewById(R.id.cart_rec);
+            recyclerView.setLayoutManager(new LinearLayoutManager(this));
+            cartModelList = new ArrayList<>();
+            cartAdapter = new MyCartAdapter(this, cartModelList);
+            recyclerView.setAdapter(cartAdapter);
 
-        firestore.collection("AddToCart").document(auth.getCurrentUser().getUid())
-                .collection("User").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                if (task.isSuccessful()) {
-                    for (DocumentSnapshot doc : task.getResult().getDocuments()) {
-                        MyCartModel myCartModel = doc.toObject(MyCartModel.class);
-                        cartModelList.add(myCartModel);
-                        cartAdapter.notifyDataSetChanged();
+            firestore.collection("AddToCart").document(auth.getCurrentUser().getUid())
+                    .collection("User").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                    if (task.isSuccessful()) {
+                        for (DocumentSnapshot doc : task.getResult().getDocuments()) {
+                            MyCartModel myCartModel = doc.toObject(MyCartModel.class);
+                            cartModelList.add(myCartModel);
+                            cartAdapter.notifyDataSetChanged();
+                        }
                     }
                 }
-            }
-        });
+            });
+        } catch (Exception e) {
+
+        }
 
     }
 }

@@ -59,21 +59,11 @@ public class Splash extends AppCompatActivity {
                 startActivity(About);
                 break;
 
-            case R.id.itCategorias:
-                Intent Categories = new Intent(Splash.this, CategoriesActivity.class);
-                startActivity(Categories);
-                break;
-
             case R.id.itSalir:
                 Intent intent = new Intent();
                 intent.setAction(intent.ACTION_MAIN);
                 intent.addCategory(intent.CATEGORY_HOME);
                 startActivity(intent);
-                break;
-
-            case R.id.menu_my_cart:
-                Intent Carrito = new Intent(Splash.this, CartActivity.class);
-                startActivity(Carrito);
                 break;
         }
 

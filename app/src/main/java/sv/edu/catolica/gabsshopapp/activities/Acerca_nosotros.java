@@ -46,10 +46,6 @@ public class Acerca_nosotros extends AppCompatActivity implements View.OnClickLi
                 startActivity(About);
                 break;
 
-            case R.id.itCategorias:
-                Intent Categories = new Intent(Acerca_nosotros.this, CategoriesActivity.class);
-                startActivity(Categories);
-                break;
 
             case R.id.itSalir:
                 Intent intent = new Intent();

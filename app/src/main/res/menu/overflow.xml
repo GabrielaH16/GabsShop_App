@@ -8,18 +8,11 @@
     <item
         android:id="@+id/itAcerca"
         android:title="Acerca de nosotros" />
-    <item
-        android:id="@+id/itCategorias"
-        android:title="Categorias" />
+
     <item
         android:id="@+id/itSalir"
         android:icon="@drawable/ic_baseline_loginout"
         android:title="Salir"
-        app:showAsAction="always" />
-    <item
-        android:id="@+id/menu_my_cart"
-        android:icon="@drawable/menu_shopping"
-        android:title="Carrito"
         app:showAsAction="always" />
 
 </menu>

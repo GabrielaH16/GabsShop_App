@@ -3,6 +3,8 @@ package sv.edu.catolica.gabsshopapp.activities;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -32,6 +34,8 @@ public class actividad_detalles extends AppCompatActivity {
     ImageView detailedImg;
     TextView rating, name, description, price;
     Button addToCart, buyNow;
+
+    private final static String WHATSAPP_LINK = "https://wa.me/message/DM42FHQZTP4RK1";
 
     //New Products
     NewProductsModel newProductsModel = null;
@@ -73,6 +77,9 @@ public class actividad_detalles extends AppCompatActivity {
         addToCart = findViewById(R.id.add_to_cart);
         buyNow = findViewById(R.id.buy_now);
 
+
+
+
         //New Products
         if (newProductsModel != null) {
             Glide.with(getApplicationContext()).load(newProductsModel.getImg_url()).into(detailedImg);
@@ -103,6 +110,16 @@ public class actividad_detalles extends AppCompatActivity {
             name.setText(showAllModel.getName());
         }
 
+
+        //Comprar Ahora
+        buyNow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(WHATSAPP_LINK));
+                startActivity(intent);
+            }
+        });
 
         addToCart.setOnClickListener(new View.OnClickListener() {
             @Override
